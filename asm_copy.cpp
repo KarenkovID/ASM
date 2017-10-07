@@ -1,6 +1,5 @@
 #include <iostream>
 #include <emmintrin.h>
-#include <ctime>
 
 using namespace std;
 
@@ -47,9 +46,9 @@ const int MAX_SIZE = 10000;
 int main() {
     srand((unsigned int) time(NULL));
 
+#pragma omp parallel for
     for (int i = 0; i < TESTS_COUNT; ++i) {
         int size = rand() % MAX_SIZE + 1;
-
         int src[size];
         int dst[size];
 
@@ -63,7 +62,6 @@ int main() {
         for (int j = 0; j < size; ++j) {
             if (src[j] != dst[j]) {
                 cout << "bad trip";
-                return 0;
             }
         }
     }
