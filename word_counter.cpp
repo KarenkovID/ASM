@@ -83,7 +83,7 @@ size_t count(const char *str, size_t size) {
 
 string test() {
     std::string s = "";
-    int len = 1000;
+    int len = (rand() % 100000g);
     for (int i = 0; i < len; ++i) {
         int k = rand() % 2;
         if (k) {
