@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.7)
 project(ASM)
 
 set(CMAKE_CXX_STANDARD 14)
-
+SET( CMAKE_CXX_FLAGS "-m32 -mssse3")
 include(FindOpenMP)
 if(OPENMP_FOUND)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
@@ -11,4 +11,4 @@ if(OPENMP_FOUND)
 endif()
 
 add_executable(ASM1 asm_copy.cpp)
-#add_executable(ASM2 word_counter.cpp)
+add_executable(ASM2 word_counter.cpp)
