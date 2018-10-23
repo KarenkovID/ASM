@@ -12,3 +12,4 @@ endif()
 
 add_executable(ASM1 asm_copy.cpp)
 add_executable(ASM2 word_counter.cpp)
+add_executable(ASM_UTF utf8_to_utf16_convertor.cpp)
