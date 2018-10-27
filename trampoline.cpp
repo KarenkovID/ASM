@@ -45,7 +45,7 @@ public:
             char *page_ptr = (char *) mmap(
                     nullptr,
                     PAGE_SIZE,
-                    PROT_EXEC | PROT_READ | PROT_writeCode,
+                    PROT_EXEC | PROT_READ | PROT_WRITE,
                     MAP_PRIVATE | MAP_ANONYMOUS,
                     -1,
                     0);
